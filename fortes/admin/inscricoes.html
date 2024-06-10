@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscriçoes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/admin/inscricoes.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="grid-layout">
+      
+  <header class="navbar">
+    <nav>
+      <div>
+        <img src="../img/logo.png" alt="logo" id="logo">
+      </div>
+      <div class="right-nav">
+        <span id="user-nav"><img src="../img/user.png" alt=""> Usuário</span> 
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="sidebar">
+      <div class="sidebar-items">
+      <ul>
+        <li><button type="" onclick="openDash()"> <span> <img src="../icons/home/home-light.svg" alt=""> </span> <span>Dashboard</span></button></li>
+        <li><button type="" id="sidebar-active" onClick="openInsc()"> <span><img src="../icons/group/group-light.svg" alt=""> </span> <span>Inscrições</span></button></li>
+        <li><button type="" onClick="openEdi()"> <span> <img src="../icons/paper/paper-light.svg" alt="">  </span> <span>Editais</span></button></li>
+        <li><button type="" onClick="openProj()"> <span> <img src="../icons/category/category-light.svg" alt="">  </span> <span>Projetos</span></button></li>
+      </ul>
+      </div>
+      <div class="logout">
+        <button type="">Sair</button>
+      </div>
+    </div>
+    <div class="container-2">
+      <div class="flex-container">
+      <div class="mid-container">
+        <div class="mid-container-left">
+          <div class="left-item">
+            <button onClick="callFilter()" class="default" id="element1">Pendentes(15)</button>
+            <button onClick="callFilter()" class="default" id="element2"> Aprovados</button>
+            <button onClick="callFilter()" class="default" id="element3">Recusados</button>
+          </div>
+          <div class="left-item">
+            <button onClick="callFilter2()" class="default" id="2-element1">Editais</button>
+            <button onClick="callFilter2()" class="default" id="2-element2">Cadastros</button>
+          </div>
+        </div>
+        <div class="mid-container-right">
+          <h1>Teste</h1>
+          <h1>Teste</h1>
+            <div class="conteudo" id="conteudo#1">
+              a
+            </div>
+            <div class="conteudo" id="conteudo#2">
+              a
+            </div>
+
+        </div>
+      </div>  
+      </div>
+  </div>
+    
+  </main>
+
+    </div>
+    
+<script src="../js/admin/script.js"></script>
+<script src="../js/admin/inscricoes.js"></script>
+  </body>
+</html>
