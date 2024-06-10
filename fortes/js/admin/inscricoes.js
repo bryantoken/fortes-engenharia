@@ -1,92 +1,95 @@
-function callFilter() {
-	 const buttons = document.querySelectorAll('button');
-
-    buttons.forEach(button => {
-        button.addEventListener('click', function(event) {
-            buttonActive(event.target.id);
-        });
-    });
 
 
-}
 
+const element1 = document.getElementById('element1');
+element1.classList.add('filter-active');
 function buttonActive(buttonId) {
+	let element2 = document.getElementById('element2');
+	let element3 = document.getElementById('element3');
 	switch (buttonId){
 	case 'element1':
-		styleClear(buttonId);
-		styleChange(buttonId);
+		element2.classList.remove('filter-active');
+		element3.classList.remove('filter-active');
+		element2.classList.add('default');
+		element3.classList.add('default');
+		element1.classList.add('filter-active');
 		break;
 	case 'element2':
-		styleClear(buttonId);
-		styleChange(buttonId);
+		element1.classList.remove('filter-active');
+		element3.classList.remove('filter-active');
+		element1.classList.add('default');
+		element3.classList.add('default');
+		element2.classList.add('filter-active');
+
 		break;
 	case 'element3':
-		styleClear(buttonId);
-		styleChange(buttonId);
+		element1.classList.remove('filter-active');
+		element2.classList.remove('filter-active');
+		element1.classList.add('default');
+		element2.classList.add('default');
+		element3.classList.add('filter-active');
 		break;
 	}
 }
 
-function styleChange(tipo){
-	let element = document.getElementById(tipo);
-	 if(element.classList.contains('default')){
-	 	element.classList.remove('default');
-	 	element.classList.add('filter-active');
-	 }
-}
-
-function styleClear(tipo){
-	const buttons = document.querySelectorAll('button');
-	let element = document.getElementById(tipo);
-		 
-    buttons.forEach(button => {
-        button.classList.remove('filter-active');
-	 	element.classList.add('filter-active');
-    });
-
-}
 // ==========================================================
 // CATEGORIA 2
 
-function callFilter2() {
-	 const buttons = document.querySelectorAll('button');
+const element4 = document.getElementById('element4');
+const conteudo1 = document.getElementById('conteudo#1');
+const conteudo2 = document.getElementById('conteudo#2');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function(event) {
-            buttonActive2(event.target.id);
-        });
-    });
+conteudo1.classList.add('conteudo-active');
 
-
-}
-
+element4.classList.add('filter-active');
 function buttonActive2(buttonId) {
+	let element5 = document.getElementById('element5');
+
 	switch (buttonId){
-	case '2-element1':
-		styleClear2(buttonId);
-		styleChange2(buttonId);
+	case 'element4':
+		element5.classList.remove('filter-active');
+		element5.classList.add('default');
+		element4.classList.add('filter-active');
+
+		conteudo2.classList.remove('conteudo-active');
+		conteudo2.classList.add('conteudo-default');
+		conteudo1.classList.add('conteudo-active');
+
 		break;
-	case '2-element2':
-		styleClear2(buttonId);
-		styleChange2(buttonId);
+	case 'element5':
+		element4.classList.remove('filter-active');
+		element4.classList.add('default');
+		element5.classList.add('filter-active');
+
+		conteudo1.classList.remove('conteudo-active');
+		conteudo1.classList.add('conteudo-default');
+		conteudo2.classList.add('conteudo-active');
+
 		break;
-}
-}
-function styleChange2(tipo){
-	let element = document.getElementById(tipo);
-	 if(element.classList.contains('default')){
-	 	element.classList.remove('default');
-	 	element.classList.add('filter-active');
-	 }
+	}
 }
 
-function styleClear2(tipo){
-	const buttons = document.querySelectorAll('button');
+// ============================================================
+// LISTA DE SOLICITACOES
+
+
+
+function listActive(tipo) {
 	let element = document.getElementById(tipo);
-		 
-    buttons.forEach(button => {
-        button.classList.remove('filter-active');
-	 	element.classList.add('filter-active');
+	let checkbox = document.getElementById(tipo+'-check');
+	if(checkbox.checked) {
+	element.classList.add("list-active");
+	} else {
+	element.classList.remove("list-active");
+	}
+
+}
+function openMail(tipo) {
+let valor = document.getElementById(tipo).value;
+const mail = document.getElementById('mail#'+valor);
+const allMails = document.querySelectorAll('[id^="mail#"]');
+    allMails.forEach(mail => {
+        mail.classList.remove('mail-active');
     });
-
+ mail.classList.add('mail-active');
 }
