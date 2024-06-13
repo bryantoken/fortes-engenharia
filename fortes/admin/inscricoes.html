@@ -11,6 +11,11 @@
     <link href="../css/admin/inscricoes.css" rel="stylesheet">
   </head>
   <body>
+    <div class="offcanvas" style="display: none;">
+        <button onClick="closeOffCanvas()" class="closeOffcanvas"> <i> <img src="../icons/close/close-light.png" alt=""> </i> </button>
+         <div id="offcanvasContent"></div>
+      </div>
+
     <div class="grid-layout">
       
   <header class="navbar">
@@ -20,6 +25,7 @@
       </div>
       <div class="right-nav">
         <span id="user-nav"><img src="../img/user.png" alt=""> Usuário</span> 
+        <button onClick="showOffCanvas()" class="menuOffcanvas"> <i> <img src="../icons/menu/menu-light.png" alt=""> </i> </button>
       </div>
     </nav>
   </header>
@@ -37,23 +43,38 @@
         <button type="">Sair</button>
       </div>
     </div>
+
+     
     <div class="container-2">
+      <div class="popup" style="display: none;">
+         <div id="header-popup">
+    <button class="close-button bt-secondary" onclick="closePopup()">Voltar</button>
+           
+         </div>
+
+
+         <div id="popupContent"></div>
+      </div>
+
+
       <div class="flex-container">
       <div class="mid-container">
         <div class="mid-container-left">
           <div class="left-item">
-            <button onClick="buttonActive(this.id)" class="default" id="element1">Pendentes(15)</button>
-            <button onClick="buttonActive(this.id)" class="default" id="element2"> Aprovados</button>
-            <button onClick="buttonActive(this.id)" class="default" id="element3">Recusados</button>
+            <button onClick="buttonActive(this.id)" class="default" id="element1"> <i> <img src="../icons/clock/clock-light.svg"> </i> Pendentes(15)</button>
+            <button onClick="buttonActive(this.id)" class="default" id="element2"> <i> <img src="../icons/close/close-square-light.svg"> </i> Aprovados</button>
+            <button onClick="buttonActive(this.id)" class="default" id="element3"> <i> <img src="../icons/tick/tick-square-light.svg"> </i> Recusados</button>
           </div>
           <div class="left-item">
-            <button onClick="buttonActive2(this.id)" class="default" id="element4">Editais</button>
-            <button onClick="buttonActive2(this.id)" class="default" id="element5">Cadastros</button>
+            <button onClick="buttonActive2(this.id)" class="default" id="element4"> <i> <img src="../icons/paper/paper-light.svg"> </i> Editais</button>
+            <button onClick="buttonActive2(this.id)" class="default" id="element5"> <i> <img src="../icons/group/group-light.svg"> </i>  Cadastros</button>
           </div>
         </div>
+
         <div class="mid-container-right">
+
             <div class="conteudo-default" id="conteudo#1">
-              <nav>
+              <nav class="nav-search">
                 <div class="search-div">
                   <i class="icon">
                     <img src="../icons/search/search-light.svg" alt=""> 
@@ -96,9 +117,9 @@
                   <div class="mail mail-default" id="mail#1"> 
                     <main>
                         <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
+                    <h2>Participando do Edital nº 1</h2>
+                    <p>CNPJ: 11.111.111/1111-11.</p>
+                    <p>CPF responsável: 111.111.111-11</p>
                     <p>ODS: Meio ambiente</p>
                     <h3>Informações Adicionais</h3>
                     <ul>
@@ -106,7 +127,7 @@
                       <li>Local: São Paulo, SP</li>
                       <li>Duração do projeto: 12 meses</li>
                       <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Parceiros envolvidos: Empresa Garoto, ONG Amor</li>
                       <li>Número de beneficiários: 200 pessoas</li>
                       <li>Meta principal: Reduzir o desemprego local em 15%</li>
                     </ul>
@@ -122,20 +143,20 @@
                      <!-- =================== -->
                   <div class="mail mail-default" id="mail#2"> 
                      <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
+                        <h1>Projeto Amor Vermelho</h1>  
+                    <h2>Participando do Edital nº 2</h2>
+                    <p>CNPJ: 22.222.222/2222-22.</p>
+                    <p>CPF responsável: 222.222.222-22</p>
+                    <p>ODS: Educação</p>
                     <h3>Informações Adicionais</h3>
                     <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                      <li>Data de início: 01/01/2022</li>
+                      <li>Local: Vitória, ES</li>
+                      <li>Duração do projeto: 2 meses</li>
+                      <li>Investimento total: R$ 20.000,00</li>
+                      <li>Parceiros envolvidos: Empresa Xen, ONG ABC</li>
+                      <li>Número de beneficiários: 500 pessoas</li>
+                      <li>Meta principal: Melhorar educação em escolas estaduais</li>
                     </ul>
                     </main>
                     <nav>
@@ -148,20 +169,20 @@
                    <!-- =================== -->
                   <div class="mail mail-default" id="mail#3"> 
                     <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
+                        <h1>Projeto Avon</h1>  
+                    <h2>Participando do Edital nº 3</h2>
+                    <p>CNPJ: 33.333.333/3333-33.</p>
+                    <p>CPF responsável: 333.333.333-33</p>
+                    <p>ODS: Trabalho</p>
                     <h3>Informações Adicionais</h3>
                     <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                      <li>Data de início: 01/12/2021</li>
+                      <li>Local: Rio de Janeiro, RJ</li>
+                      <li>Duração do projeto: 7 meses</li>
+                      <li>Investimento total: R$ 90.000,00</li>
+                      <li>Parceiros envolvidos: Empresa Dell, ONG LOG</li>
+                      <li>Número de beneficiários: 250 pessoas</li>
+                      <li>Meta principal: Diminuir desemprego nas indústrias em 15%</li>
                     </ul>
                     </main>
                   
@@ -176,20 +197,20 @@
                    <!-- =================== -->
                   <div class="mail mail-default" id="mail#4"> 
                      <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
+                        <h1>Projeto Flor Mais Amor</h1>  
+                    <h2>Participando do Edital nº 4</h2>
+                    <p>CNPJ: 44.444.444/4444-44.</p>
+                    <p>CPF responsável: 444.444.444-44</p>
                     <p>ODS: Meio ambiente</p>
                     <h3>Informações Adicionais</h3>
                     <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
+                      <li>Data de início: 11/05/2025</li>
+                      <li>Local: Ouro Preto, MG</li>
                       <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                      <li>Investimento total: R$ 200.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XOR, ONG ABEL</li>
+                      <li>Número de beneficiários: 900 pessoas</li>
+                      <li>Meta principal: Reflorestamento e geração de empregos</li>
                     </ul>
                     </main>
                   
@@ -204,20 +225,20 @@
                    <!-- =================== -->
                   <div class="mail mail-default" id="mail#5"> 
                      <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
+                        <h1>Projeto RISO</h1>  
+                    <h2>Participando do Edital nº 5</h2>
+                    <p>CNPJ: 555.555.555/5555-55.</p>
+                    <p>CPF responsável: 555.555.555-55</p>
+                    <p>ODS: Educação</p>
                     <h3>Informações Adicionais</h3>
                     <ul>
-                      <li>Data de início: 01/01/2024</li>
+                      <li>Data de início: 01/01/2019</li>
                       <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Duração do projeto: 2 meses</li>
+                      <li>Investimento total: R$ 20.000,00</li>
+                      <li>Parceiros envolvidos: ONG ALFABETO</li>
                       <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                      <li>Meta principal: Levar entretenimento e educação para crianças de escolas públicas</li>
                     </ul>
                     </main>
                   
@@ -232,20 +253,20 @@
                    <!-- =================== -->
                   <div class="mail mail-default" id="mail#6"> 
                      <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
+                        <h1>Projeto Comida de Casa</h1>  
+                    <h2>Participando do Edital nº 6</h2>
+                    <p>CNPJ: 666.666.666/6666-66.</p>
+                    <p>CPF responsável: 666.666.666-66</p>
+                    <p>ODS: Fome Zero</p>
                     <h3>Informações Adicionais</h3>
                     <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                      <li>Data de início: 01/01/2020</li>
+                      <li>Local: Serra, ES</li>
+                      <li>Duração do projeto: 9 meses</li>
+                      <li>Investimento total: R$ 80.000,00</li>
+                      <li>Parceiros envolvidos: ONG ABC</li>
+                      <li>Número de beneficiários: 260 pessoas</li>
+                      <li>Meta principal: Alimentar pessoas em situação de rua</li>
                     </ul>
                     </main>
                   
@@ -260,20 +281,20 @@
                    <!-- =================== -->
                   <div class="mail mail-default" id="mail#7"> 
                      <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
+                        <h1>Projeto Mar Azul</h1>  
+                    <h2>Participando do Edital nº 7</h2>
+                    <p>CNPJ: 777.777.777/7777-77.</p>
+                    <p>CPF responsável: 777.777.777-77</p>
                     <p>ODS: Meio ambiente</p>
                     <h3>Informações Adicionais</h3>
                     <ul>
-                      <li>Data de início: 01/01/2024</li>
+                      <li>Data de início: 06/12/2024</li>
                       <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                      <li>Duração do projeto: 9 meses</li>
+                      <li>Investimento total: R$ 90.000,00</li>
+                      <li>Parceiros envolvidos: Empresa Kleys</li>
+                      <li>Número de beneficiários: 2000 pessoas</li>
+                      <li>Meta principal: Reduzir dano ao ambiente aquático e geração de empregos</li>
                     </ul>
                     </main>
                   
@@ -306,50 +327,53 @@
                 <div class="conteudo-container-left">
 
                   <ul>
-                   <li> <button type="list-bt" onClick="openMail(this.id)" class="list-default" id="l1" value="1"> <span id="check-span"><input type="checkbox" onChange="listActive('l1')" id="l1-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   <li> <button type="list-bt" onClick="openMail2(this.id)" class="list-default" id="l1#2" value="1"> <span id="check-span"><input type="checkbox" onChange="listActive2('l1')" id="l1-check#2"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
 
-                    <li> <button type="list-bt" onClick="openMail(this.id)" class="list-default" id="l2" value="2"> <span id="check-span"><input type="checkbox" onChange="listActive('l2')" id="l2-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    <li> <button type="list-bt" onClick="openMail2(this.id)" class="list-default" id="l2#2" value="2"> <span id="check-span"><input type="checkbox" onChange="listActive2('l2')" id="l2-check#2"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
 
-                    <li> <button type="list-bt" onClick="openMail(this.id)" value="3" class="list-default" id="l3"> <span id="check-span"><input type="checkbox" onChange="listActive('l3')" id="l3-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    <li> <button type="list-bt" onClick="openMail2(this.id)" value="3" class="list-default" id="l3#2"> <span id="check-span"><input type="checkbox" onChange="listActive2('l3')" id="l3-check#2"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
 
-                    <li> <button type="list-bt" onClick="openMail(this.id)" value="4" class="list-default" id="l4"> <span id="check-span"><input type="checkbox" onChange="listActive('l4')" id="l4-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    <li> <button type="list-bt" onClick="openMail2(this.id)" value="4" class="list-default" id="l4#2"> <span id="check-span"><input type="checkbox" onChange="listActive2('l4')" id="l4-check#2"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
 
-                    <li> <button type="list-bt" onClick="openMail(this.id)" value="5" class="list-default" id="l5"> <span id="check-span"><input type="checkbox" onChange="listActive('l5')" id="l5-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    <li> <button type="list-bt" onClick="openMail2(this.id)" value="5" class="list-default" id="l5#2"> <span id="check-span"><input type="checkbox" onChange="listActive2('l5')" id="l5-check#2"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
 
-                    <li> <button type="list-bt" onClick="openMail(this.id)" value="6" class="list-default" id="l6"> <span id="check-span"><input type="checkbox" onChange="listActive('l6')" id="l6-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    <li> <button type="list-bt" onClick="openMail2(this.id)" value="6" class="list-default" id="l6#2"> <span id="check-span"><input type="checkbox" onChange="listActive2('l6')" id="l6-check#2"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
 
-                    <li> <button type="list-bt" onClick="openMail(this.id)" value="7" class="list-default" id="l7"> <span id="check-span"><input type="checkbox" onChange="listActive('l7')" id="l7-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    <li> <button type="list-bt" onClick="openMail2(this.id)" value="7" class="list-default" id="l7#2"> <span id="check-span"><input type="checkbox" onChange="listActive2('l7')" id="l7-check#2"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
 
                   </ul>
 
                 </div>
-                <div class="conteudo-container-right">
+                <div class="conteudo-container-right cont-2">
 
                   <!-- =================== -->
-                  <div class="mail mail-default" id="mail#1"> 
+                  <div class="mail mail-default" id="mail2#1"> 
                     <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
-                    <h3>Informações Adicionais</h3>
-                    <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
-                    </ul>
+                      <h1>Instituto Esperança</h1>
+    <h2>Informações da Instituição</h2>
+    <p>CNPJ: 22.222.222/0001-22</p>
+    <p>Endereço: Rua da Solidariedade, 123, Bairro Esperança, São Paulo, SP</p>
+    <p>Telefone: (11) 2222-2222</p>
+    <p>E-mail: contato@institutoesperanca.org.br</p>
+
+    <h3>Informações Adicionais</h3>
+    <ul>
+        <li>Data de Fundação: 15/03/2010</li>
+        <li>Responsável: Maria da Silva</li>
+        <li>Objetivo: Apoio à educação de crianças e adolescentes</li>
+        <li>Principais Projetos: Reforço Escolar, Oficinas de Arte, Capacitação Profissional</li>
+        <li>Número de Beneficiários: 350 pessoas</li>
+        <li>Fontes de Recursos: Doações, Parcerias com Empresas, Eventos Beneficentes</li>
+        <li>Meta Anual: Aumentar o número de beneficiários em 20%</li>
+    </ul>
+                        
                     </main>
                   
                     <nav>
@@ -360,23 +384,25 @@
                   <!-- =================== -->
 
                      <!-- =================== -->
-                  <div class="mail mail-default" id="mail#2"> 
+                  <div class="mail mail-default" id="mail2#2"> 
                      <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
-                    <h3>Informações Adicionais</h3>
-                    <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
-                    </ul>
+                    <h1>Associação Vida Nova</h1>
+    <h2>Informações da Instituição</h2>
+    <p>CNPJ: 44.444.444/0001-44</p>
+    <p>Endereço: Avenida da Esperança, 789, Bairro Vida, Belo Horizonte, MG</p>
+    <p>Telefone: (31) 4444-4444</p>
+    <p>E-mail: contato@vidanova.org.br</p>
+
+    <h3>Informações Adicionais</h3>
+    <ul>
+        <li>Data de Fundação: 10/08/2012</li>
+        <li>Responsável: Ana Pereira</li>
+        <li>Objetivo: Promoção da saúde e bem-estar</li>
+        <li>Principais Projetos: Clínica Comunitária, Programa de Nutrição, Aulas de Yoga</li>
+        <li>Número de Beneficiários: 400 pessoas</li>
+        <li>Fontes de Recursos: Doações, Convênios com Prefeituras, Parcerias com Hospitais</li>
+        <li>Meta Anual: Ampliar o atendimento médico em 25%</li>
+    </ul>
                     </main>
                     <nav>
                       <button class="bt-secondary">Recusar</button>
@@ -386,23 +412,25 @@
                   <!-- =================== -->
 
                    <!-- =================== -->
-                  <div class="mail mail-default" id="mail#3"> 
+                  <div class="mail mail-default" id="mail2#3"> 
                     <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
-                    <h3>Informações Adicionais</h3>
-                    <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
-                    </ul>
+                    <h1>Fundação Amor ao Próximo</h1>
+    <h2>Informações da Instituição</h2>
+    <p>CNPJ: 55.555.555/0001-55</p>
+    <p>Endereço: Rua da Caridade, 321, Bairro União, Curitiba, PR</p>
+    <p>Telefone: (41) 5555-5555</p>
+    <p>E-mail: contato@amorproximo.org.br</p>
+
+    <h3>Informações Adicionais</h3>
+    <ul>
+        <li>Data de Fundação: 05/06/2018</li>
+        <li>Responsável: Pedro Santos</li>
+        <li>Objetivo: Assistência social e humanitária</li>
+        <li>Principais Projetos: Distribuição de Alimentos, Aulas de Informática, Apoio Psicológico</li>
+        <li>Número de Beneficiários: 450 pessoas</li>
+        <li>Fontes de Recursos: Doações, Parcerias com Empresas, Subvenções Municipais</li>
+        <li>Meta Anual: Expandir a distribuição de alimentos para 10 novas comunidades</li>
+    </ul>
                     </main>
                   
                     <nav>
@@ -414,23 +442,25 @@
 
 
                    <!-- =================== -->
-                  <div class="mail mail-default" id="mail#4"> 
+                  <div class="mail mail-default" id="mail2#4"> 
                      <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
-                    <h3>Informações Adicionais</h3>
-                    <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
-                    </ul>
+                     <h1>Centro Comunitário Vida Plena</h1>
+    <h2>Informações da Instituição</h2>
+    <p>CNPJ: 66.666.666/0001-66</p>
+    <p>Endereço: Avenida da Paz, 654, Bairro Alegria, Porto Alegre, RS</p>
+    <p>Telefone: (51) 6666-6666</p>
+    <p>E-mail: contato@vidaplena.org.br</p>
+
+    <h3>Informações Adicionais</h3>
+    <ul>
+        <li>Data de Fundação: 12/11/2016</li>
+        <li>Responsável: Carla Mendes</li>
+        <li>Objetivo: Promoção de atividades culturais e esportivas</li>
+        <li>Principais Projetos: Escolinha de Futebol, Oficinas de Teatro, Aulas de Dança</li>
+        <li>Número de Beneficiários: 300 pessoas</li>
+        <li>Fontes de Recursos: Doações, Patrocínios, Venda de Produtos Artesanais</li>
+        <li>Meta Anual: Dobrar o número de alunos nas escolinhas esportivas</li>
+    </ul>
                     </main>
                   
                     <nav>
@@ -442,23 +472,25 @@
 
 
                    <!-- =================== -->
-                  <div class="mail mail-default" id="mail#5"> 
+                  <div class="mail mail-default" id="mail2#5"> 
                      <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
-                    <h3>Informações Adicionais</h3>
-                    <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
-                    </ul>
+                         <h1>Associação Futuro Brilhante</h1>
+    <h2>Informações da Instituição</h2>
+    <p>CNPJ: 77.777.777/0001-77</p>
+    <p>Endereço: Rua da Luz, 789, Bairro Progresso, Salvador, BA</p>
+    <p>Telefone: (71) 7777-7777</p>
+    <p>E-mail: contato@futurobrilhante.org.br</p>
+
+    <h3>Informações Adicionais</h3>
+    <ul>
+        <li>Data de Fundação: 25/09/2014</li>
+        <li>Responsável: Lucas Almeida</li>
+        <li>Objetivo: Desenvolvimento de habilidades profissionais</li>
+        <li>Principais Projetos: Cursos de Informática, Treinamento em Empreendedorismo, Workshop de Carreiras</li>
+        <li>Número de Beneficiários: 500 pessoas</li>
+        <li>Fontes de Recursos: Doações, Apoio de Empresas, Subvenções Estaduais</li>
+        <li>Meta Anual: Capacitar 200 novos profissionais</li>
+    </ul>
                     </main>
                   
                     <nav>
@@ -470,23 +502,25 @@
 
 
                    <!-- =================== -->
-                  <div class="mail mail-default" id="mail#6"> 
+                  <div class="mail mail-default" id="mail2#6"> 
                      <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
-                    <h3>Informações Adicionais</h3>
-                    <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
-                    </ul>
+                    <h1>Casa da Esperança</h1>
+    <h2>Informações da Instituição</h2>
+    <p>CNPJ: 88.888.888/0001-88</p>
+    <p>Endereço: Rua da Alegria, 123, Bairro Harmonia, Recife, PE</p>
+    <p>Telefone: (81) 8888-8888</p>
+    <p>E-mail: contato@casadaesperanca.org.br</p>
+
+    <h3>Informações Adicionais</h3>
+    <ul>
+        <li>Data de Fundação: 20/02/2013</li>
+        <li>Responsável: Júlia Carvalho</li>
+        <li>Objetivo: Assistência a famílias em situação de vulnerabilidade</li>
+        <li>Principais Projetos: Programa de Alimentação, Acompanhamento Psicológico, Aulas de Reforço Escolar</li>
+        <li>Número de Beneficiários: 600 pessoas</li>
+        <li>Fontes de Recursos: Doações, Parcerias com Supermercados, Campanhas de Arrecadação</li>
+        <li>Meta Anual: Ampliar o programa de alimentação para 300 novas famílias</li>
+    </ul>
                     </main>
                   
                     <nav>
@@ -498,23 +532,25 @@
 
 
                    <!-- =================== -->
-                  <div class="mail mail-default" id="mail#7"> 
+                  <div class="mail mail-default" id="mail2#7"> 
                      <main>
-                        <h1>Projeto Marte</h1>  
-                    <h2>Participando do Edital nº 23</h2>
-                    <p>CNPJ: 111.111.111-11</p>
-                    <p>CPF responsavel: 111.111.111-11</p>
-                    <p>ODS: Meio ambiente</p>
-                    <h3>Informações Adicionais</h3>
-                    <ul>
-                      <li>Data de início: 01/01/2024</li>
-                      <li>Local: São Paulo, SP</li>
-                      <li>Duração do projeto: 12 meses</li>
-                      <li>Investimento total: R$ 500.000,00</li>
-                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
-                      <li>Número de beneficiários: 200 pessoas</li>
-                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
-                    </ul>
+                     <h1>Semeando o Futuro</h1>
+    <h2>Informações da Instituição</h2>
+    <p>CNPJ: 99.999.999/0001-99</p>
+    <p>Endereço: Avenida das Flores, 456, Bairro Primavera, Fortaleza, CE</p>
+    <p>Telefone: (85) 9999-9999</p>
+    <p>E-mail: contato@semeandoofuturo.org.br</p>
+
+    <h3>Informações Adicionais</h3>
+    <ul>
+        <li>Data de Fundação: 10/10/2015</li>
+        <li>Responsável: Fernanda Lima</li>
+        <li>Objetivo: Promover a educação ambiental</li>
+        <li>Principais Projetos: Hortas Comunitárias, Educação Ambiental nas Escolas, Reciclagem Criativa</li>
+        <li>Número de Beneficiários: 700 pessoas</li>
+        <li>Fontes de Recursos: Doações, Parcerias com Escolas, Projetos Governamentais</li>
+        <li>Meta Anual: Implementar hortas comunitárias em 20 novas escolas</li>
+    </ul>
                     </main>
                   
                     <nav>

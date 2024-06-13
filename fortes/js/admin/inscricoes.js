@@ -85,6 +85,9 @@ function listActive(tipo) {
 
 }
 function openMail(tipo) {
+if (window.innerWidth < 1250) {
+showPopup();
+}
 let valor = document.getElementById(tipo).value;
 const mail = document.getElementById('mail#'+valor);
 const allMails = document.querySelectorAll('[id^="mail#"]');
@@ -93,3 +96,48 @@ const allMails = document.querySelectorAll('[id^="mail#"]');
     });
  mail.classList.add('mail-active');
 }
+
+// ===========================================================
+// LISTA DE SOLICITACOES CADASTRO
+function listActive2(tipo) {
+	let element = document.getElementById(tipo+'#2');
+	let checkbox = document.getElementById(tipo+'-check#2');
+	if(checkbox.checked) {
+	element.classList.add("list-active");
+	} else {
+	element.classList.remove("list-active");
+	}
+
+}
+function openMail2(tipo) {
+if (window.innerWidth < 1250) {
+showPopup2();
+}
+let valor = document.getElementById(tipo).value;
+const mail = document.getElementById('mail2#'+valor);
+const allMails = document.querySelectorAll('[id^="mail2#"]');
+    allMails.forEach(mail => {
+        mail.classList.remove('mail-active');
+    });
+ mail.classList.add('mail-active');
+}
+
+// ===============================================
+// ABRIR POPUP DE CONTEUDO
+function showPopup() {
+    var testeContent = document.querySelector('.conteudo-container-right').innerHTML;
+     document.getElementById('popupContent').innerHTML = testeContent;
+    document.querySelector('.popup').style.display = 'block';
+}
+
+function showPopup2() {
+    var testeContent = document.querySelector('.cont-2').innerHTML;
+     document.getElementById('popupContent').innerHTML = testeContent;
+
+    document.querySelector('.popup').style.display = 'block';
+}
+
+function closePopup() {
+    document.querySelector('.popup').style.display = 'none';
+}
+

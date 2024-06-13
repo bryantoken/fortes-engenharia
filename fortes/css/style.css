@@ -22,7 +22,7 @@
   --sidebar-bt-bg-active: #E9F5FE;
   --bg-container: rgb(24, 197, 255, 3%);
 
-  * }
+   }
 html {
     scroll-behavior: smooth;
 }
@@ -206,11 +206,11 @@ width: 100%;
 /* ============================  TIPO CONTAINER 2(Divisao em filtro(left) e conteudo(right) )  ========================================== */
 /* DIV PAI CONTAINER */
 .mid-container {
-  height: 100%;  
   display: grid;
   grid-template-columns: 1.5fr 8.5fr;
 /*  flex-wrap: wrap;*/
   gap: 20px;
+  height: 100%;
 }
 /* DIV FILHO LEFT(FILTROS ETC) */
 .mid-container-left{
@@ -235,6 +235,12 @@ width: 100%;
   border: 2px solid transparent;
   cursor: pointer;
   transition: ease 0.8s;
+  gap:20px;
+}
+.left-item button i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .left-item{
   display: flex;
@@ -253,7 +259,7 @@ width: 100%;
   flex: 9 1 auto;
   border-radius: 20px;
   background-color: var(--bg-gray);
-  height: 100%;
+
   
 }
 
@@ -304,3 +310,122 @@ width: 100%;
   align-items: center;
   justify-content: center;
 }
+
+
+
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1250px){
+   .sidebar {
+    display: none;
+  }
+
+.container-2 {
+    overflow-y: scroll;
+    position: relative;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr !important;
+}
+
+}
+
+
+
+
+/* ============================================= */
+/* OFFCANVAS */
+.offcanvas {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0%;
+    left: 0px;
+    background-color: white;
+    max-width: 300px;
+    padding: 20px;
+    width: 90%;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: moveRight 2s forwards;
+}
+#offcanvasContent {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+@keyframes moveRight {
+    from {
+        transform: translateX(-100%); 
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.menuOffcanvas {
+  display: none;
+}
+.closeOffcanvas img {
+    width: 24px;
+  height: 24px;
+}
+.closeOffcanvas i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.closeOffcanvas {
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    font-size: 1em;
+    cursor: pointer;
+}
+.menuOffcanvas img{
+  width: 24px;
+  height: 24px;
+}
+.menuOffcanvas i {
+  display: flex;
+  justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+@media(max-width: 1250px) {
+  .menuOffcanvas {
+    display: flex;
+    padding: 20px;
+    background-color: transparent;
+    border: 0;
+    font-size: 1em;
+  }
+
+/*  .menuOffcanvas:focus {
+    animation: rotateMenu 2s forwards; 
+
+  }*/
+}
+/*
+@keyframes rotateMenu {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}*/

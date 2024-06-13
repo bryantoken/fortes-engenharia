@@ -11,6 +11,10 @@
     <link href="../css/admin/dashboard.css" rel="stylesheet">
   </head>
   <body>
+    <div class="offcanvas" style="display: none;">
+        <button onClick="closeOffCanvas()" class="closeOffcanvas"> <i> <img src="../icons/close/close-light.png" alt=""> </i> </button>
+         <div id="offcanvasContent"></div>
+      </div>
     <div class="grid-layout">
       
   <header class="navbar">
@@ -20,6 +24,8 @@
       </div>
       <div class="right-nav">
         <span id="user-nav"><img src="../img/user.png" alt=""> Usuário</span> 
+        <button onClick="showOffCanvas()" class="menuOffcanvas"> <i> <img src="../icons/menu/menu-light.png" alt=""> </i> </button>
+        
       </div>
     </nav>
   </header>

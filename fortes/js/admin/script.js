@@ -11,3 +11,11 @@ function openProj() {
 window.open("projetos.html", "_self");
 }
 
+function showOffCanvas() {
+    var offcanvas = document.querySelector('.sidebar').innerHTML;
+     document.getElementById('offcanvasContent').innerHTML = offcanvas;
+    document.querySelector('.offcanvas').style.display = 'block';
+}
+function closeOffCanvas() {
+    document.querySelector('.offcanvas').style.display = 'none';
+}
