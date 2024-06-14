@@ -1,0 +1,115 @@
+.container-user-edit{
+    display:inline-block;
+    height: 200px;
+    width: 300px;
+    background-color: #ffff;
+    border-radius: 3%;
+    border: 3px solid #e5e5e5;
+    margin-top: 20px;
+    margin-left: 2%;
+}
+.container-user-edit div{
+    text-align: center;
+    background: #e9f5fe;
+    height: 30px;
+}
+.bar p{
+    color: #0085db;
+}
+.container-user-edit span{
+    
+    color: #435d6b;
+}
+
+.mid-container-right-user{
+    flex: 9 1 auto;
+    border-radius: 20px;
+    background-color: var(--bg-gray);
+    margin-top: -4%;
+
+}
+.container-user-edit button{
+    background-color: #eef6ff;
+   width: 60px;
+    display: inline-block;
+    align-items: center;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: ease 0.8s;
+    margin-top: 23%;
+    margin-left: 76%;
+    
+
+}
+
+.search-div-user{
+    position: relative;
+    min-width: 200px;
+    max-width: 500px;
+    display: grid;
+    margin-top: 2%;
+    margin-left: 2%;
+  }
+  .search-div-user input {
+    padding:8px 8px 8px 40px;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 1em;
+    border: none;
+    border: 1px solid hsl(0,0%,90%, 1.0);
+    outline: none;
+    color: hsl(0, 0%, 20%, 1.0);
+  }
+  .search-div-user input:hover {
+    border: 1px solid hsl(0,0%,20%, 1.0);
+  }
+  .search-div-user input:focus{
+    border: 1px solid hsl(0,0%,20%, 1.0);
+  }
+  .search-div-user i{
+    position: absolute;
+    top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+    border-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .containeruser{
+    display:inline-block;
+    height: 200px;
+    width: 300px;
+    background-color: #ffff;
+    border-radius: 3%;
+    border: 3px solid #e5e5e5;
+    margin-top: 20px;
+    margin-left: 2%;
+}
+.containeruser div{
+    text-align: center;
+    background: #e9f5fe;
+    height: 30px;
+}
+.bar p{
+    color: #0085db;
+}
+.containeruser span{
+    
+    color: #435d6b;
+}
+.containeruser button{
+    background-color: #eef6ff;
+   width: 60px;
+    display: inline-block;
+    align-items: center;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: ease 0.8s;
+    margin-top: 14%;
+    margin-left: 76%;
+    
+
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/user/template.css">
+    <link rel="stylesheet" href="../css/admin/inscricoes.css">
+
+  </head>
+  <body>
+    <div class="grid-layout">
+      
+  <header class="navbar">
+    <nav>
+      <div>
+        <img src="../img/logo.png" alt="logo" id="logo">
+      </div>
+      <div class="right-nav">
+        <span id="user-nav"><img src="../img/user.png" alt=""> Donatário</span> 
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="sidebar">
+      <div class="sidebar-items">
+      <ul>
+        <li><button type="" onclick="edituser()"> <span> <img src="../icons/paper/paper-light.svg" alt="">  </span> <span>Editais</span></button></li>
+        <li><button type=""  onclick="projuser()"> <span> <img src="../icons/category/category-light.svg" alt="">  </span> <span>Projetos</span></button></li>
+      </ul>
+      </div>
+      <div class="logout">
+        <button type="">Sair</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex-container">
+        <div class="flex-container">
+          <div class="mid-container">
+            <div class="mid-container-left">
+              <div class="left-item">
+                <button onClick="buttonActive(this.id)" class="default" id="element1"> <i> <img src="../icons/clock/clock-light.svg"> </i> Pendentes(15)</button>
+                <button onClick="buttonActive(this.id)" class="default" id="element2"> <i> <img src="../icons/tick/tick-square-light.svg"> </i> Aprovados</button>
+                <button onClick="buttonActive(this.id)" class="default" id="element3"> <i> <img src="../icons/close/close-square-light.svg"> </i> Recusados</button>
+              </div>
+              
+          </div>
+          
+            <div class="mid-container-right-user">
+        <div class="search-div-user">
+          <i class="icon">
+            <img src="../icons/search/search-light.svg" alt=""> 
+          </i>
+          <input type="" name="" class="search-bar" placeholder="Pesquisar">
+          </div>
+        <div class="containeruser"><div class="bar"><p>
+          Projeto Alimentando Corações
+        </p> <br><span>Este projeto visa atender pessoas em situação de rua, com  fornecimento de alimentos, etc...</span>
+        <button type=""><p>ABRIR</p></button></div>
+        </div>
+        <div class="containeruser"><div class="bar"><p>
+          Projeto Reconstruir com Amor
+        </p><br> <span>Este projeto visa atender pessoas em situação de rua, com  fornecimento de alimentos, etc...</span>
+        <button type=""><p>ABRIR</p></button></div>
+      </div>
+        <div class="containeruser"><div class="bar"><p>
+          Projeto Infância Feliz
+        </p> <br><span>Este projeto visa atender pessoas em situação de rua, com  fornecimento de alimentos, etc...</span>
+        <button type=""><p>ABRIR</p></button></div>
+      </div>
+      <div class="containeruser"><div class="bar"><p>
+        Projeto Nutrindo Vidas
+      </p> <br><span>Este projeto visa atender pessoas em situação de rua, com  fornecimento de alimentos, etc...</span>
+      <button type=""><p>ABRIR</p></button></div>
+    </div>
+      </div>
+        </div>
+        </div>
+        </div>
+      </div>
+        <!-- CONTEUDO BASE AQUI -->
+      </div>
+  </div>
+  </main>
+    </div>
+    <script src="../js/admin/script.js"></script>
+  </body>
+</html>
