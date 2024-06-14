@@ -13,10 +13,10 @@ function logar(event) {
     let pass_entry = document.getElementById("senha").value;
     switch(true) {
         case user_entry == adm.usuario && pass_entry == adm.senha:
-            window.open("../fortes/admin/dashboard.html", "_self");
+            window.open("./fortes/admin/dashboard.html", "_self");
             break;
         case user_entry == user.usuario && pass_entry == user.senha:
-            window.open("../fortes/donatario/editais.html", "_self");
+            window.open("./fortes/donatario/editais.html", "_self");
             break;
         case user_entry === "" || pass_entry === "":
             alert("Preencha todos os campos!");

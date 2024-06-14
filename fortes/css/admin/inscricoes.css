@@ -107,4 +107,10 @@ padding-left: 20px;
 #header-popup {
 padding: 10px 0px 10px 0px;
 }
-
+@media (max-width: 1250px) {
+	.conteudo-container {
+		display: grid !important;
+		grid-template-columns: 1fr !important;
+	}
+	
+}
