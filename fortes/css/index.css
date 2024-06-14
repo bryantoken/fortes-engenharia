@@ -1,0 +1,311 @@
+/*############################################
+Seção 1 - Header/Navbar   (Header / Logo-container / Nav-section / Link-container / Profile-container)
+Seção 2 - Login-main      (Login-main / Form-section / Login-container / Btn-container / Projeto-container)
+Seção 3 - Campanhas-main 
+Seção 4 - Sobre-main 
+Seção 5 - Faq-main 
+##############################################*/
+
+/*############################################
+<-------------->Início - Variáveis<-------------->
+############################################*/
+
+:root {
+  /* MAIN COLORS */
+  --primary: #0085DB;
+  --secondary: #F8B400;
+  
+  /* STATUS */
+  --other: #558DFF;
+  --alert: #FFE16A;
+  --danger: #FF3333;
+  --disabled: #D8D8D8;
+  --confirmed: #00C247;
+  --informative: #004CE8;
+
+  /* TEXTS */
+  --font-color: #000000;
+
+  --head-1: 600 46px/120% 'Open Sans', sans-serif;
+  --head-2: 36px/120% 'Open Sans', sans-serif;
+  --head-3: 28px/120% 'Open Sans', sans-serif;
+  --head-4: 22px/120% 'Open Sans', sans-serif;
+  --head-5: 18px/120% 'Open Sans', sans-serif;
+  
+  --paragraph: lighter 32px/150% 'Open Sans', sans-serif;
+
+  --link-small: 600 16px/120% 'Open Sans', sans-serif;
+  --link-medium: 600 18px/120% 'Open Sans', sans-serif;
+  --link-large: bolder 22px/120% 'Open Sans', sans-serif;
+  --link-border: 3px solid #000000; 
+  
+  /* BOX SHADOW */
+  --shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  --shadow-light: 0 8px 16px 0 rgba(0,0,0,0.04);
+
+  /* BUTTONS */
+  /* --btn-padd: 32px 18px; */
+  --btn-height: 50px;
+  --btn-width: 170px; 
+
+  /* PRIMARY BUTTON */
+  --btn-pri-: #EEF6FF;
+  --btn-pri-hover: #0085DB;
+
+  /* SECONDARY BUTTON */
+  --btn-sec: #FDFCFC;
+  --btn-sec-hover: #EEF6FF;
+  --btn--sec-border: 2px solid #0074BE;
+  
+  --btn-sec-font: 600 18px/120% 'Open Sans', sans-serif;
+  --btn-sec-font-color: #0074BE;
+  
+  /* TERTIARY BUTTON */
+  --btn-ter: #0085DB;
+  --btn-ter-hover: #0074BE;
+  --btn-ter-font: 600 18px/120% 'Open Sans', sans-serif;
+  --btn-ter-font-color: #EEF6FF;
+  
+  /* CONTAINER */
+  --bg-gray: #F4F4F6;
+
+  /* INPUTS */
+  --input-width: 100%;
+  --input-height: 48px;
+  
+  --input-bgcolor: #FFFFFF;
+  --input-border: 2px solid #D6D6D6;
+  --input-border-hover: 2px solid #0085DB;
+  --input-border-focus: 3px solid #0085DB;
+ 
+  /* SIDEBAR */
+  --sidebar-bt-default: #5D7285;
+  --sidebar-bt-active: #0085DB;
+  --sidebar-bt-bg-active: #E9F5FE;
+  --bg-container: rgb(24, 197, 255, 3%);
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim - Variáveis<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+
+/*############################################
+<-------------->Início - Seção 1 (Header/Navbar)<-------------->
+############################################*/
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 5%;
+}
+
+.logo-container {
+  width: 100px;
+  height: 0;
+  padding: 2em;
+
+  background-image: url("../img/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nav-section {
+  height: auto;
+  width: 100%;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.links > a {
+  font: var(--link-medium);
+  color: var(--font-color);
+
+  padding-bottom: 3px;
+
+  transition: .1s;
+}
+.links > a:hover {
+  border-bottom: var(--link-border);
+}
+
+.profile-container {
+}
+
+#btn-login {
+  margin: 2px;
+
+  width: var(--btn-width);
+  height: var(--btn-height);
+  background-color: var(--btn-sec);
+
+  border: var(--btn--sec-border);
+  border-radius: 8px;
+
+  font: var(--btn-sec-font);
+  color: var(--btn-sec-font-color);
+}
+
+#btn-login:hover {
+  cursor: pointer; 
+  background-color: var(--btn-sec-hover);
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim Seção 1 (Header/Navbar)<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+
+/*############################################
+<-------------->Início - Seção 2 (Login-main)<-------------->
+############################################*/
+
+#login-main {
+  gap: 2%;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  padding: 20px;
+}
+
+.login-section {
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.projeto-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projeto-container img {
+display: flex;
+max-width: 500px;
+max-height: 500px;
+}
+.login-section > h1 {
+  color: var(--font-color);
+  font: var(--head-1);
+}
+.login-section > p {
+  width: 100%;
+  margin-bottom: 3em;
+
+  font: var(--paragraph);
+}
+
+.login-container {
+  display: grid;
+  gap: 5px;
+}
+.login-container > label {
+  font: 16px/120% 'Open Sans', sans-serif;
+  color: var(--font-color);
+}
+.login-container > input {
+  max-width: var(--input-width);
+  flex: auto;
+  height: var(--input-height);
+  padding: 0 1em;
+  background-color: var(--input-bgcolor);
+  border: var(--input-border);
+  border-radius: 8px;
+  transition: .1s;
+}
+.login-container > input:hover {
+  border: var(--input-border-hover);
+}
+.login-container > input:focus {
+  border: var(--input-border-focus);
+  outline: none;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.btn-links {
+  width: 30%;
+  color: var(--primary);
+  font: var(--link-medium);
+  text-align: center;
+}
+
+
+
+/*||||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim - Seção 2 (Login-main)<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+
+/*############################################
+<-------------->Início - Seção 3 (Campanhas-main)<-------------->
+############################################*/
+
+main#campanhas {
+  display: none;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim - Seção 3 (Campanhas-main)<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+
+/*############################################
+<-------------->Início - Seção 4 (Sobre-main)<-------------->
+############################################*/
+
+main#sobre {
+  display: none;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim - Seção 4 (Sobre-main)<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+
+/*############################################
+<-------------->Início - Seção 5 (Faq-main)<-------------->
+############################################*/
+
+main#faq {
+  display: none;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim - Seção 5 (Faq-main)<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.enable {
+  display: block;
+}
+.disable {
+  display: none;
+}
+
+
+
+

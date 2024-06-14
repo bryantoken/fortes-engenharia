@@ -429,3 +429,36 @@ main {
     transform: rotate(90deg);
   }
 }*/
+
+.conteudo {
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  height: 100%;
+  position: relative;
+}
+
+/* RESPONSIVIDADE */
+@media(max-width: 1250px) {
+	.mid-container {
+	  display: flex;
+	  flex-direction: column;
+	}
+	.search-div {
+	  max-width: 100%;
+	}
+	.mid-container-left {
+	  flex-direction: row;
+	}
+	.left-item {
+	  width: 100%;
+	}
+	.conteudo-container-right {
+	  display: none;
+	}
+	.conteudo-container {
+	}
+
+}

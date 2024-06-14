@@ -1,0 +1,44 @@
+.container-user-edit{
+    height: 200px;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.container-user-edit .bar{
+    text-align: center;
+    background: #e9f5fe;
+    height: 30px;
+    width: 100%;
+}
+.bar p{
+    color: #0085db;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+    height: 100%;
+}
+.card-content div {
+    display: flex;
+    justify-content: end;
+
+}
+.container-user-edit span{
+    color: #435d6b;
+}
+.conteudo-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    overflow-y: auto;
+    padding-top: 1px;
+}
+
+.mid-container-right {
+    overflow: hidden;
+    max-height: 100vh;
+}

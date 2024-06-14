@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Editais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/donatario/cards.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../img/logo_app.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="offcanvas" style="display: none;">
+        <button onClick="closeOffCanvas()" class="closeOffcanvas"> <i> <img src="../icons/close/close-light.png" alt=""> </i> </button>
+         <div id="offcanvasContent"></div>
+      </div>
+
+    <div class="grid-layout">
+      
+  <header class="navbar">
+    <nav>
+      <div>
+        <img src="../img/logo.png" alt="logo" id="logo">
+      </div>
+      <div class="right-nav">
+        <span id="user-nav"><img src="../img/user.png" alt=""> Donatário </span> 
+        <button onClick="showOffCanvas()" class="menuOffcanvas"> <i> <img src="../icons/menu/menu-light.png" alt=""> </i> </button>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="sidebar">
+      <div class="sidebar-items">
+      <ul>
+        <li><button type="" onClick="openEdi()" id="sidebar-active"> <span> <img src="../icons/paper/paper-light.svg" alt="">  </span> <span>Editais</span></button></li>
+        <li><button type="" onClick="openProj()" > <span> <img src="../icons/category/category-light.svg" alt="">  </span> <span>Projetos</span></button></li>
+      </ul>
+      </div>
+      <div class="logout">
+        <button type="" onClick="logout()">Sair</button>
+      </div>
+    </div>
+
+     
+    <div class="container-2">
+      <div class="popup" style="display: none;">
+         <div id="header-popup">
+    <button class="close-button bt-secondary" onclick="closePopup()">Voltar</button>
+           
+         </div>
+
+
+         <div id="popupContent"></div>
+      </div>
+
+
+      <div class="flex-container">
+      <div class="mid-container">
+        <div class="mid-container-left">
+          <div class="left-item">
+            <button onClick="buttonActive(this.id)" class="default" id="element1"> <i> <img src="../icons/clock/clock-light.svg"> </i> Novos(23)</button>
+            <button onClick="buttonActive(this.id)" class="default" id="element2"> <i> <img src="../icons/close/close-square-light.svg"> </i> Aprovados</button>
+            <button onClick="buttonActive(this.id)" class="default" id="element3"> <i> <img src="../icons/tick/tick-square-light.svg"> </i> Recusados</button>
+          </div>
+        </div>
+
+        <div class="mid-container-right">
+
+            <div class="conteudo">
+              <nav class="nav-search">
+                <div class="search-div">
+                  <i class="icon">
+                    <img src="../icons/search/search-light.svg" alt=""> 
+                  </i>
+                  <input type="" name="" class="search-bar" placeholder="Pesquisar">
+                </div>
+              </nav>
+              <div class="conteudo-container">
+
+                <div class="container-user-edit"><div class="bar">
+                    <p>Edital nº 4812</p>
+                    </div>
+                    <div class="card-content">
+                    <span>Abertura: 24/01/2024 </span>
+                    <span>Encerramento: 24/12/2024 </span>
+                    <span>Inscritos: 65.323 </span>
+                    <div>
+                    <button type="" class="bt-secondary"><p>ABRIR</p></button>
+                    </div>
+                    </div>    
+                </div>
+                <div class="container-user-edit"><div class="bar">
+                    <p>Edital nº 4812</p>
+                    </div>
+                    <div class="card-content">
+                    <span>Abertura: 24/01/2024 </span>
+                    <span>Encerramento: 24/12/2024 </span>
+                    <span>Inscritos: 65.323 </span>
+                    <div>
+                    <button type="" class="bt-secondary"><p>ABRIR</p></button>
+                    </div>
+                    </div>    
+                </div>
+                <div class="container-user-edit"><div class="bar">
+                    <p>Edital nº 4812</p>
+                    </div>
+                    <div class="card-content">
+                    <span>Abertura: 24/01/2024 </span>
+                    <span>Encerramento: 24/12/2024 </span>
+                    <span>Inscritos: 65.323 </span>
+                    <div>
+                    <button type="" class="bt-secondary"><p>ABRIR</p></button>
+                    </div>
+                    </div>    
+                </div>
+
+                </div>
+
+              </div>
+            </div>
+
+        </div>
+      </div>  
+      </div>
+  </div>
+    
+  </main>
+
+    </div>
+    
+<script src="../js/script.js"></script>
+<script src="../js/admin/inscricoes.js"></script>
+  </body>
+</html>

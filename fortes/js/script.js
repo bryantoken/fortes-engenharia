@@ -19,3 +19,6 @@ function showOffCanvas() {
 function closeOffCanvas() {
     document.querySelector('.offcanvas').style.display = 'none';
 }
+function logout() {
+    window.open("../index.html", "_self");
+}
